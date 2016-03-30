@@ -10,9 +10,12 @@
 defined('_JEXEC') or die;
 ?>
 <style>
-	.collapsed svg text {
-	  transform: rotate(45deg) rotate(-45deg);
-	  transform-origin: 50% 50%; /* Chrome, Firefox behaves differently */
+	.collapsed .fa-plus {
+		-webkit-transform: rotate(22.5deg);
+		-moz-transform: rotate(22.5deg);
+		-ms-transform: rotate(22.5deg);
+		-o-transform: rotate(22.5deg);
+		transform: rotate(22.5deg);
 	}
 </style>
 <script>
@@ -25,11 +28,7 @@ jQuery(function(){
 		<<?php echo $headerTag . $headerClass . '>' . $moduleTitle; ?></<?php echo $headerTag; ?>>
 	<?php endif; ?>
 	<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse<?php echo $module_id; ?>" aria-expanded="false" aria-controls="collapse<?php echo $module_id; ?>">
-		<svg width="43" height="50" viewBox="0 0 43 50" xmlns="http://www.w3.org/2000/svg">
-			<g fill="none" fill-rule="evenodd"><path d="M21.404 2.044L1.82 13.657v22.795l19.617 11.725 20.17-11.554v-22.74L21.404 2.044z" stroke="#353535" stroke-width="2"/>
-				<text font-family="Arial" font-size="26" fill="#353535" transform="translate(1 2)"><tspan x="13" y="31">+</tspan></text>
-			</g>
-		</svg>
+		<i class="fa fa-plus"></i>
 		<?php echo $buttontext; ?>
 	</button>
 	<div class="collapse in" id="collapse<?php echo $module_id; ?>">
